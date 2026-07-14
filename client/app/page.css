@@ -1,0 +1,323 @@
+main {
+  padding: var(--large-padding);
+
+  display: grid;
+  gap: var(--large-padding);
+  grid-template-columns: 70lvw calc(30lvw - (var(--large-padding) * 3));
+  grid-template-rows: auto;
+  grid-template-areas: "main sub";
+}
+
+main .box-1 {
+  grid-area: main;
+}
+main .announcement {
+  border-left: 3px solid var(--primary-light);
+  width: 100%;
+  border-radius: 8px;
+  padding: var(--medium-padding) var(--medium-padding) var(--medium-padding)
+    calc(var(--medium-padding) * 2);
+  background-color: var(--bg-light);
+  list-style-type: disc;
+  margin: 0 0 var(--large-padding) 0;
+
+  .title {
+    font-family: monospace;
+    color: var(--text-muted);
+    font-weight: 600;
+    opacity: 0.7;
+    margin: 0 0 var(--large-padding) -16px;
+    letter-spacing: 2px;
+    list-style-type: none;
+    font-size: 0.8rem;
+  }
+  li::marker {
+    color: var(--primary-light);
+  }
+  li {
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    margin: 0 0 var(--small-padding) 0;
+  }
+  .highlight {
+    color: var(--primary-light);
+    font-weight: 500;
+  }
+  .heading {
+    font-weight: 600;
+  }
+}
+main .socials {
+  height: 50px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 9px;
+
+  span {
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    font-weight: 600;
+    font-family:
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+  }
+  a {
+    width: 35px;
+    height: 35px;
+    background-color: var(--bg-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+  }
+  svg {
+    color: var(--text-muted);
+  }
+}
+main .list {
+  margin: 16px 0 0 0;
+  width: 100%;
+  height: 360px;
+
+  display: grid;
+  grid-template-rows: 50px auto;
+  grid-template-areas:
+    "title"
+    "items";
+}
+main .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: var(--text);
+  font-size: 1.4rem;
+  gap: 3px;
+
+  > span {
+    font-family: var(--font-heading);
+  }
+  .filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+  }
+  .filter-container span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.1s;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    color: var(--text-muted);
+    background-color: var(--bg-light);
+    border-radius: 4px;
+  }
+  .filter-container span:hover {
+    color: var(--text);
+    background-color: var(--bg-extra-light);
+  }
+}
+main .list .items {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  gap: 6px;
+  overflow: hidden;
+}
+main .list .items .item {
+  transition: 0.15s ease-out;
+  height: 100%;
+  width: calc((70lvw - 4 * 6px) / 5);
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  transform: translateX(calc(var(--i) * ((70lvw / 5 - 5px) + 6px)));
+}
+main .item .image-container {
+  position: relative;
+  height: 75%;
+  width: 100%;
+  border-radius: 5px;
+  background-color: var(--secondary);
+}
+main .item .info {
+  padding: 6px;
+
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+}
+main .item .text-container {
+  text-align: center;
+  font-family: var(--font-body);
+  color: var(--text);
+  padding: 0 var(--small-padding);
+  font-size: 0.8rem;
+}
+
+main .box-2 {
+  grid-area: sub;
+}
+main .call-to-action-box {
+  --column-1: calc(65px - var(--small-padding) - var(--small-padding));
+
+  width: 100%;
+  height: 65px;
+  padding: var(--small-padding);
+  border-radius: 6px;
+  background-color: var(--bg-light);
+
+  display: grid;
+  column-gap: 8px;
+  row-gap: 2px;
+  grid-template-columns: var(--column-1) auto;
+  grid-template-rows: calc(var(--column-1) / 2) calc(var(--column-1) / 2);
+  grid-template-areas:
+    "svg title"
+    "svg bio";
+
+  margin: 0 0 6px 0;
+}
+main .call-to-action-box .svg-container {
+  height: var(--column-1);
+  width: var(--column-1);
+  background-color: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+
+  svg {
+    grid-area: svg;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+  }
+}
+main .call-to-action-box .call-title {
+  display: block;
+  grid-area: title;
+  font-family: var(--font-body);
+  color: var(--text);
+  font-size: 0.9rem;
+
+  display: flex;
+  align-items: flex-end;
+}
+main .call-to-action-box .call-bio {
+  display: block;
+  grid-area: bio;
+  font-family: var(--font-body);
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  display: flex;
+  align-items: flex-start;
+}
+main .box-2 .sub-title {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+}
+main .box-2 .sub-title .primary {
+  color: var(--text);
+  margin: 0 12px 0 0;
+}
+main .box-2 span {
+  font-weight: 100;
+  color: var(--text-extra-muted);
+}
+main .box-2 .sub-title .secondary {
+  color: var(--text-extra-muted);
+  margin: 0 0 0 12px;
+}
+main .box-2 .recently-added-list li {
+  transition: 0.1s ease-out;
+  cursor: pointer;
+
+  --i: calc(120px - (var(--small-padding) * 2));
+
+  height: 120px;
+  width: 100%;
+  padding: var(--small-padding);
+  border-radius: 6px;
+
+  font-family: var(--font-body);
+
+  display: grid;
+  column-gap: 12px;
+  grid-template-rows: 1fr 6fr 1fr;
+  grid-template-columns: 70px auto;
+  grid-template-areas:
+    "img type"
+    "img name"
+    "img info";
+
+  .thumbnail-container {
+    transition: 0.1s ease-out;
+    grid-area: img;
+
+    background-color: var(--primary);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .type {
+    transition: 0.1s ease-out;
+    grid-area: type;
+    color: var(--text-extra-muted);
+    font-size: 0.6rem;
+  }
+  .manga-name {
+    transition: 0.1s ease-out;
+    grid-area: name;
+    color: var(--text);
+    font-size: 0.9rem;
+  }
+  .info {
+    grid-area: info;
+
+    font-size: 0.7rem;
+
+    span:first-child {
+      transition: 0.1s ease-out;
+      color: var(--text-muted);
+    }
+    span:last-child {
+      transition: 0.1s ease-out;
+      margin: 0 0 0 8px;
+      color: var(--text-extra-muted);
+    }
+  }
+}
+main .box-2 .recently-added-list li:hover {
+  background-color: var(--bg-light);
+
+  .thumbnail-container {
+    background-color: var(--primary-light);
+  }
+  .type {
+    color: var(--text-muted);
+  }
+  .manga-name {
+    color: var(--primary-light);
+  }
+  .info {
+    span:first-child {
+      color: var(--text);
+    }
+    span:last-child {
+      color: var(--text-muted);
+    }
+  }
+}
