@@ -321,3 +321,74 @@ main .box-2 .recently-added-list li:hover {
     }
   }
 }
+
+main .box-2 ol li {
+  font-family: var(--font-body);
+
+  border-radius: 4px;
+  padding: 8px;
+  margin: 0 0 3px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+}
+main .box-2 ol li:first-child {
+  background-color: rgba(241, 215, 45, 0.304);
+  .ranking {
+    background-color: rgba(241, 215, 45, 0.567);
+  }
+}
+main .box-2 ol li:nth-child(2) {
+  .ranking {
+    background-color: rgba(192, 192, 192, 0.522);
+  }
+}
+main .box-2 ol li:nth-child(3) {
+  .ranking {
+    background-color: rgba(132, 38, 38, 0.546);
+  }
+}
+main .box-2 ol li:first-child,
+main .box-2 ol li:nth-child(2),
+main .box-2 ol li:nth-child(3) {
+  .ranking {
+    color: black;
+  }
+}
+main .box-2 ol .ranking {
+  width: 25px;
+  height: 25px;
+
+  border-radius: 20px;
+  color: var(--text-extra-muted);
+
+  font-weight: 700;
+  font-size: 0.8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .box-2 ol .avatar {
+  width: 35px;
+  height: 35px;
+
+  border-radius: 35px;
+  background-color: aliceblue;
+}
+main .box-2 ol .name {
+  font-size: 0.9rem;
+  color: var(--text);
+  margin-right: auto;
+}
+main .box-2 ol .total-uploads {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+
+  span {
+    font-weight: 400;
+    color: var(--text-extra-muted);
+  }
+}

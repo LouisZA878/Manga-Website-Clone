@@ -268,6 +268,88 @@ export default function Home() {
         <div className="sub-title">
           <div className="primary">Top 10 Uploaders</div>
         </div>
+        <ol>
+          <li>
+            <div className="ranking">1</div>
+            <div className="avatar"></div>
+            <div className="name">Hypernet</div>
+            <div className="total-uploads">
+              3 104 <span>ch</span>
+            </div>
+          </li>
+          <li>
+            <div className="ranking">2</div>
+            <div className="avatar"></div>
+            <div className="name">Hypernet</div>
+            <div className="total-uploads">
+              3 104 <span>ch</span>
+            </div>
+          </li>
+          <li>
+            <div className="ranking">3</div>
+            <div className="avatar"></div>
+            <div className="name">Hypernet</div>
+            <div className="total-uploads">
+              3 104 <span>ch</span>
+            </div>
+          </li>
+          <li>
+            <div className="ranking">4</div>
+            <div className="avatar"></div>
+            <div className="name">Hypernet</div>
+            <div className="total-uploads">
+              3 104 <span>ch</span>
+            </div>
+          </li>
+          <li>
+            <div className="ranking">5</div>
+            <div className="avatar"></div>
+            <div className="name">Hypernet</div>
+            <div className="total-uploads">
+              3 104 <span>ch</span>
+            </div>
+          </li>
+          <li>
+            <div className="ranking">6</div>
+            <div className="avatar"></div>
+            <div className="name">Hypernet</div>
+            <div className="total-uploads">
+              3 104 <span>ch</span>
+            </div>
+          </li>
+          <li>
+            <div className="ranking">7</div>
+            <div className="avatar"></div>
+            <div className="name">Hypernet</div>
+            <div className="total-uploads">
+              3 104 <span>ch</span>
+            </div>
+          </li>
+          <li>
+            <div className="ranking">8</div>
+            <div className="avatar"></div>
+            <div className="name">Hypernet</div>
+            <div className="total-uploads">
+              3 104 <span>ch</span>
+            </div>
+          </li>
+          <li>
+            <div className="ranking">9</div>
+            <div className="avatar"></div>
+            <div className="name">Hypernet</div>
+            <div className="total-uploads">
+              3 104 <span>ch</span>
+            </div>
+          </li>
+          <li>
+            <div className="ranking">10</div>
+            <div className="avatar"></div>
+            <div className="name">Hypernet</div>
+            <div className="total-uploads">
+              3 104 <span>ch</span>
+            </div>
+          </li>
+        </ol>
       </div>
     </main>
   );

@@ -27,8 +27,6 @@ const Lists = ({ title, bigData }) => {
     }
   };
 
-  console.log(place);
-
   return (
     <section className="list">
       <div className="title">
