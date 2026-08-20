@@ -1,0 +1,125 @@
+main .large-lists {
+  width: 100%;
+  height: calc(310px * 3);
+
+  display: grid;
+  grid-template-rows: 50px auto auto auto;
+}
+main .list {
+  margin: 16px 0 0 0;
+  width: 100%;
+  height: 360px;
+
+  display: grid;
+  grid-template-rows: 50px auto;
+}
+main .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: var(--text);
+  font-size: 1.4rem;
+  gap: 3px;
+
+  > span {
+    font-family: var(--font-heading);
+  }
+  .filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+  }
+  .filter-container span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.1s;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    color: var(--text-muted);
+    background-color: var(--bg-light);
+    border-radius: 4px;
+  }
+  .filter-container span:hover {
+    color: var(--text);
+    background-color: var(--bg-extra-light);
+  }
+}
+main .list .items,
+main .large-lists .items {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  gap: 6px;
+  overflow: hidden;
+}
+main .list .items .item,
+main .large-lists .items .item {
+  transition: 0.15s ease-out;
+  height: 100%;
+  width: calc((70lvw - 4 * 6px) / 5);
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  transform: translateX(calc(var(--i) * ((70lvw / 5 - 5px) + 6px)));
+}
+@keyframes skeleton-image {
+  0% {
+    background-color: rgba(128, 128, 128, 0.16);
+  }
+  50% {
+    background-color: rgba(128, 128, 128, 0.323);
+  }
+  100% {
+    background-color: rgba(128, 128, 128, 0.16);
+  }
+}
+main .item .image-container-skeleton {
+  position: relative;
+  height: 75%;
+  width: 100%;
+  border-radius: 5px;
+  animation: 4s ease-in-out infinite skeleton-image;
+}
+main .item .image-container {
+  position: relative;
+  height: 75%;
+  width: 100%;
+  border-radius: 5px;
+  background-color: var(--secondary);
+}
+main .item .info-skeleton div {
+  animation: 4s ease-in-out infinite skeleton-image;
+  height: 14px;
+  width: 100%;
+  margin: 4px 0;
+  border-radius: 4px;
+}
+main .item .info {
+  padding: 6px;
+
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+}
+main .item .text-container-skeleton div {
+  animation: 4s ease-in-out infinite skeleton-image;
+  height: 18px;
+  width: 100%;
+  margin: 4px 0;
+  border-radius: 4px;
+}
+main .item .text-container {
+  text-align: center;
+  font-family: var(--font-body);
+  color: var(--text);
+  padding: 0 var(--small-padding);
+  font-size: 0.8rem;
+}

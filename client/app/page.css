@@ -77,93 +77,6 @@ main .socials {
     color: var(--text-muted);
   }
 }
-main .list {
-  margin: 16px 0 0 0;
-  width: 100%;
-  height: 360px;
-
-  display: grid;
-  grid-template-rows: 50px auto;
-  grid-template-areas:
-    "title"
-    "items";
-}
-main .title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  color: var(--text);
-  font-size: 1.4rem;
-  gap: 3px;
-
-  > span {
-    font-family: var(--font-heading);
-  }
-  .filter-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3px;
-  }
-  .filter-container span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    transition: 0.1s;
-    height: 30px;
-    width: 30px;
-    cursor: pointer;
-    color: var(--text-muted);
-    background-color: var(--bg-light);
-    border-radius: 4px;
-  }
-  .filter-container span:hover {
-    color: var(--text);
-    background-color: var(--bg-extra-light);
-  }
-}
-main .list .items {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-
-  gap: 6px;
-  overflow: hidden;
-}
-main .list .items .item {
-  transition: 0.15s ease-out;
-  height: 100%;
-  width: calc((70lvw - 4 * 6px) / 5);
-  flex-grow: 0;
-  flex-shrink: 0;
-
-  transform: translateX(calc(var(--i) * ((70lvw / 5 - 5px) + 6px)));
-}
-main .item .image-container {
-  position: relative;
-  height: 75%;
-  width: 100%;
-  border-radius: 5px;
-  background-color: var(--secondary);
-}
-main .item .info {
-  padding: 6px;
-
-  display: flex;
-  justify-content: space-between;
-  font-family: var(--font-body);
-  font-size: 0.65rem;
-  color: var(--text-muted);
-}
-main .item .text-container {
-  text-align: center;
-  font-family: var(--font-body);
-  color: var(--text);
-  padding: 0 var(--small-padding);
-  font-size: 0.8rem;
-}
 
 main .box-2 {
   grid-area: sub;
@@ -324,6 +237,7 @@ main .box-2 .recently-added-list li:hover {
 
 main .box-2 ol li {
   font-family: var(--font-body);
+  transition: 0.2s;
 
   border-radius: 4px;
   padding: 8px;
@@ -333,6 +247,13 @@ main .box-2 ol li {
   align-items: center;
   justify-content: flex-start;
   gap: 12px;
+}
+main .box-2 ol li:hover {
+  background-color: var(--bg-light);
+}
+main .box-2 ol li .name:hover {
+  color: var(--primary-light);
+  cursor: pointer;
 }
 main .box-2 ol li:first-child {
   background-color: rgba(241, 215, 45, 0.304);
@@ -349,6 +270,9 @@ main .box-2 ol li:nth-child(3) {
   .ranking {
     background-color: rgba(132, 38, 38, 0.546);
   }
+}
+main .box-2 ol li:has(.name:hover) {
+  background-color: var(--bg-light);
 }
 main .box-2 ol li:first-child,
 main .box-2 ol li:nth-child(2),
@@ -382,6 +306,7 @@ main .box-2 ol .name {
   font-size: 0.9rem;
   color: var(--text);
   margin-right: auto;
+  transition: 0.2s;
 }
 main .box-2 ol .total-uploads {
   font-size: 0.8rem;

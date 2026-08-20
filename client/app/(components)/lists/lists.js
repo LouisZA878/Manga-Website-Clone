@@ -1,5 +1,7 @@
 "use client";
 
+import "./lists.css";
+
 import { useState } from "react";
 
 import Image from "next/image";
@@ -10,11 +12,12 @@ import {
 } from "react-icons/md";
 
 const Lists = ({ title, bigData }) => {
+  // Turn the skeleton on and off
+  const tempStateToggle = false;
+
   const [place, setPlace] = useState(0);
 
   const { totalComics, data } = bigData;
-
-  console.log(totalComics * -1);
 
   const handlePrevious = () => {
     if (place < 0) {
@@ -43,12 +46,28 @@ const Lists = ({ title, bigData }) => {
       <div className="items">
         {data.map((item, i) => (
           <div className="item" style={{ "--i": place }} key={i}>
-            <div className="image-container"></div>
-            <div className="info">
-              <span>{item.chapter}</span>
-              <span>{item.chapterAge} ago</span>
-            </div>
-            <div className="text-container">{item.title}</div>
+            {tempStateToggle ? (
+              <>
+                <div className="image-container"></div>
+
+                <div className="info">
+                  <span>{item.chapter}</span>
+                  <span>{item.chapterAge} ago</span>
+                </div>
+
+                <div className="text-container">{item.title}</div>
+              </>
+            ) : (
+              <>
+                <div className="image-container-skeleton"></div>
+                <div className="info-skeleton">
+                  <div></div>
+                </div>
+                <div className="text-container-skeleton">
+                  <div></div>
+                </div>
+              </>
+            )}
           </div>
         ))}
       </div>

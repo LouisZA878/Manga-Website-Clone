@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import Lists from "./(components)/lists/lists";
 
 import {
@@ -15,6 +14,7 @@ import { IoPhonePortraitOutline } from "react-icons/io5";
 import { FaDiscord } from "react-icons/fa";
 
 import "./page.css";
+import LargeLists from "./(components)/lists/large-lists";
 
 const Announcements = () => {
   return (
@@ -22,25 +22,23 @@ const Announcements = () => {
       <li className="title">ANNOUNCEMENTS</li>
       <li>
         <span className="heading">New: </span>
-        <span className="highlight">Connect MangaRaka</span> to auto-sync your
+        <span className="highlight">Connect ReaperHome</span> to auto-sync your
         read progress.
       </li>
       <li>
         <span className="heading">New: </span>
-        <span className="highlight">Connect AniList</span> to auto-sync your
+        <span className="highlight">Connect WideSpread</span> to auto-sync your
         read progress.
       </li>
       <li>
-        Comix runs on the work of scanlators, translators, and uploaders — thank
+        We runs on the work of scanlators, translators, and uploaders — thank
         you for sharing what you love.
       </li>
       <li>
-        If you'd like to upload content to Comix, please see the{" "}
+        If you'd like to upload content to this website, please see the{" "}
         <span className="highlight">upload request</span> page.
       </li>
-      <li>
-        Comix supports import your list from MAL, AL, MU, Comick and File.
-      </li>
+      <li>We supports import your list from MAL, AL, MU, Comick and File.</li>
       <li>Help us share the site to more people if you like it! ❤️</li>
     </ul>
   );
@@ -74,8 +72,128 @@ const Socials = () => {
 
 export default function Home() {
   const mockChapterData = {
-    totalComics: 16,
+    totalComics: 36,
     data: [
+      {
+        title: "The day I turned into a God",
+        img: null,
+        chapterAge: "6h",
+        chapter: "Ch.465",
+      },
+      {
+        title: "The day I turned into a God",
+        img: null,
+        chapterAge: "6h",
+        chapter: "Ch.465",
+      },
+      {
+        title: "The day I turned into a God",
+        img: null,
+        chapterAge: "6h",
+        chapter: "Ch.465",
+      },
+      {
+        title: "The day I turned into a God",
+        img: null,
+        chapterAge: "6h",
+        chapter: "Ch.465",
+      },
+      {
+        title: "The day I turned into a God",
+        img: null,
+        chapterAge: "6h",
+        chapter: "Ch.465",
+      },
+      {
+        title: "The day I turned into a God",
+        img: null,
+        chapterAge: "6h",
+        chapter: "Ch.465",
+      },
+      {
+        title: "The day I turned into a God",
+        img: null,
+        chapterAge: "6h",
+        chapter: "Ch.465",
+      },
+      {
+        title: "The day I turned into a God",
+        img: null,
+        chapterAge: "6h",
+        chapter: "Ch.465",
+      },
+      {
+        title: "The day I turned into a God",
+        img: null,
+        chapterAge: "6h",
+        chapter: "Ch.465",
+      },
+      {
+        title: "The day I turned into a God",
+        img: null,
+        chapterAge: "6h",
+        chapter: "Ch.465",
+      },
+      {
+        title: "The day I turned into a God",
+        img: null,
+        chapterAge: "6h",
+        chapter: "Ch.465",
+      },
+      {
+        title: "The day I turned into a God",
+        img: null,
+        chapterAge: "6h",
+        chapter: "Ch.465",
+      },
+      {
+        title: "The day I turned into a God",
+        img: null,
+        chapterAge: "6h",
+        chapter: "Ch.465",
+      },
+      {
+        title: "The day I turned into a God",
+        img: null,
+        chapterAge: "6h",
+        chapter: "Ch.465",
+      },
+      {
+        title: "The day I turned into a God",
+        img: null,
+        chapterAge: "6h",
+        chapter: "Ch.465",
+      },
+      {
+        title: "The day I turned into a God",
+        img: null,
+        chapterAge: "6h",
+        chapter: "Ch.465",
+      },
+      {
+        title: "The day I turned into a God",
+        img: null,
+        chapterAge: "6h",
+        chapter: "Ch.465",
+      },
+      {
+        title: "The day I turned into a God",
+        img: null,
+        chapterAge: "6h",
+        chapter: "Ch.465",
+      },
+      {
+        title: "The day I turned into a God",
+        img: null,
+        chapterAge: "6h",
+        chapter: "Ch.465",
+      },
+      {
+        title: "The day I turned into a God",
+        img: null,
+        chapterAge: "6h",
+        chapter: "Ch.465",
+      },
       {
         title: "The day I turned into a God",
         img: null,
@@ -186,6 +304,7 @@ export default function Home() {
         />
         <Lists title="Newly Released Comics" bigData={mockChapterData} />
         <Lists title="User Comic Collections" bigData={mockChapterData} />
+        <LargeLists title="Latest Updates" bigData={mockChapterData} />
       </div>
       <div className="box-2">
         <div className="call-to-action-box">
@@ -213,55 +332,57 @@ export default function Home() {
             <div className="type">MANGA</div>
             <div className="manga-name">The King, The God, The Human </div>
             <div className="info">
-              <span>Ch.6</span> <span>6m ago</span>
+              <span>Ch.6</span> <span>1m ago</span>
             </div>
           </li>
           <li>
             <div className="thumbnail-container"></div>
             <div className="type">MANGA</div>
-            <div className="manga-name">The King, The God, The Human </div>
+            <div className="manga-name">Why? </div>
             <div className="info">
-              <span>Ch.6</span> <span>6m ago</span>
+              <span>Ch.17</span> <span>6m ago</span>
             </div>
           </li>
           <li>
             <div className="thumbnail-container"></div>
             <div className="type">MANGA</div>
-            <div className="manga-name">The King, The God, The Human </div>
+            <div className="manga-name">Creature 17</div>
             <div className="info">
-              <span>Ch.6</span> <span>6m ago</span>
+              <span>Ch.1</span> <span>10m ago</span>
             </div>
           </li>
           <li>
             <div className="thumbnail-container"></div>
             <div className="type">MANGA</div>
-            <div className="manga-name">The King, The God, The Human </div>
+            <div className="manga-name">The Begining And The End</div>
             <div className="info">
-              <span>Ch.6</span> <span>6m ago</span>
+              <span>Ch.11</span> <span>33m ago</span>
             </div>
           </li>
           <li>
             <div className="thumbnail-container"></div>
             <div className="type">MANGA</div>
-            <div className="manga-name">The King, The God, The Human </div>
+            <div className="manga-name">Grass Is Greener</div>
             <div className="info">
-              <span>Ch.6</span> <span>6m ago</span>
+              <span>Ch.4</span> <span>45m ago</span>
+            </div>
+          </li>
+          <li>
+            <div className="thumbnail-container"></div>
+            <div className="type">MANWHA</div>
+            <div className="manga-name">Level Leveler</div>
+            <div className="info">
+              <span>Ch.354</span> <span>1h ago</span>
             </div>
           </li>
           <li>
             <div className="thumbnail-container"></div>
             <div className="type">MANGA</div>
-            <div className="manga-name">The King, The God, The Human </div>
-            <div className="info">
-              <span>Ch.6</span> <span>6m ago</span>
+            <div className="manga-name">
+              Where Theres A House There's A Home
             </div>
-          </li>
-          <li>
-            <div className="thumbnail-container"></div>
-            <div className="type">MANGA</div>
-            <div className="manga-name">The King, The God, The Human </div>
             <div className="info">
-              <span>Ch.6</span> <span>6m ago</span>
+              <span>Ch.100</span> <span>1h ago</span>
             </div>
           </li>
         </ul>
@@ -272,7 +393,7 @@ export default function Home() {
           <li>
             <div className="ranking">1</div>
             <div className="avatar"></div>
-            <div className="name">Hypernet</div>
+            <div className="name">Níðhöggr</div>
             <div className="total-uploads">
               3 104 <span>ch</span>
             </div>
@@ -280,73 +401,73 @@ export default function Home() {
           <li>
             <div className="ranking">2</div>
             <div className="avatar"></div>
-            <div className="name">Hypernet</div>
+            <div className="name">Jörmungandr</div>
             <div className="total-uploads">
-              3 104 <span>ch</span>
+              3 000 <span>ch</span>
             </div>
           </li>
           <li>
             <div className="ranking">3</div>
             <div className="avatar"></div>
-            <div className="name">Hypernet</div>
+            <div className="name">Fafnir</div>
             <div className="total-uploads">
-              3 104 <span>ch</span>
+              2 901 <span>ch</span>
             </div>
           </li>
           <li>
             <div className="ranking">4</div>
             <div className="avatar"></div>
-            <div className="name">Hypernet</div>
+            <div className="name">Góinn</div>
             <div className="total-uploads">
-              3 104 <span>ch</span>
+              2 900 <span>ch</span>
             </div>
           </li>
           <li>
             <div className="ranking">5</div>
             <div className="avatar"></div>
-            <div className="name">Hypernet</div>
+            <div className="name">Móinn</div>
             <div className="total-uploads">
-              3 104 <span>ch</span>
+              2 788 <span>ch</span>
             </div>
           </li>
           <li>
             <div className="ranking">6</div>
             <div className="avatar"></div>
-            <div className="name">Hypernet</div>
+            <div className="name">Grafvitnir</div>
             <div className="total-uploads">
-              3 104 <span>ch</span>
+              2 504 <span>ch</span>
             </div>
           </li>
           <li>
             <div className="ranking">7</div>
             <div className="avatar"></div>
-            <div className="name">Hypernet</div>
+            <div className="name">Grábakr</div>
             <div className="total-uploads">
-              3 104 <span>ch</span>
+              2 167 <span>ch</span>
             </div>
           </li>
           <li>
             <div className="ranking">8</div>
             <div className="avatar"></div>
-            <div className="name">Hypernet</div>
+            <div className="name">Grafvölluðr</div>
             <div className="total-uploads">
-              3 104 <span>ch</span>
+              1 834 <span>ch</span>
             </div>
           </li>
           <li>
             <div className="ranking">9</div>
             <div className="avatar"></div>
-            <div className="name">Hypernet</div>
+            <div className="name">Sváfnir</div>
             <div className="total-uploads">
-              3 104 <span>ch</span>
+              1 404 <span>ch</span>
             </div>
           </li>
           <li>
             <div className="ranking">10</div>
             <div className="avatar"></div>
-            <div className="name">Hypernet</div>
+            <div className="name">Ófnir</div>
             <div className="total-uploads">
-              3 104 <span>ch</span>
+              534 <span>ch</span>
             </div>
           </li>
         </ol>

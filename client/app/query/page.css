@@ -1,0 +1,118 @@
+#query {
+  padding: var(--large-padding);
+}
+#query .item-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 12px;
+}
+#query .item-box {
+  height: 375px;
+  padding: var(--small-padding);
+  background-color: var(--bg-light);
+  border-radius: 6px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+#query .item-box .image-container {
+  position: relative;
+  border-radius: 5px;
+  background-color: var(--secondary);
+}
+
+#query .item-box.small {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+}
+#query .item-box.small .image-container {
+  height: 75%;
+  width: 100%;
+}
+#query .item-box.small .info {
+  padding: 6px;
+
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+}
+#query .item-box.small .text-container {
+  text-align: center;
+  font-family: var(--font-body);
+  color: var(--text);
+  padding: 0 var(--small-padding);
+  font-size: 0.8rem;
+}
+
+#query .item-box.medium {
+  width: calc(250px * 2.5);
+  display: grid;
+  grid-template-columns:
+    calc(250px - var(--small-padding) - var(--small-padding))
+    1fr;
+  grid-template-areas: "img info-box";
+  gap: 12px;
+
+  flex-grow: 1;
+}
+#query .item-box.medium .image-container {
+  grid-area: img;
+
+  height: 100%;
+}
+#query .item-box.medium .info-box {
+  grid-area: info-box;
+
+  font-family: var(--font-body);
+}
+#query .item-box.medium .info-box .title {
+  color: var(--text);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+#query .item-box.medium .info-box .author {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 0 0 12px 0;
+}
+#query .item-box.medium .info-box .bio {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+#query .filter {
+  padding: var(--small-padding);
+  margin: 0 0 12px 0;
+  display: flex;
+  gap: 12px;
+}
+#query .filter .filter-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+  font-family: var(--font-body);
+
+  span {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+  }
+
+  select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    margin: 6px 0 0 0;
+    width: 100%;
+    padding: var(--small-padding);
+    background-color: var(--bg-light);
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+    border: 0px;
+    color: var(--text);
+  }
+}
