@@ -1,4 +1,4 @@
-main {
+#home {
   padding: var(--large-padding);
 
   display: grid;
@@ -8,10 +8,10 @@ main {
   grid-template-areas: "main sub";
 }
 
-main .box-1 {
+#home .box-1 {
   grid-area: main;
 }
-main .announcement {
+#home .announcement {
   border-left: 3px solid var(--primary-light);
   width: 100%;
   border-radius: 8px;
@@ -48,7 +48,7 @@ main .announcement {
     font-weight: 600;
   }
 }
-main .socials {
+#home .socials {
   height: 50px;
 
   display: flex;
@@ -78,10 +78,10 @@ main .socials {
   }
 }
 
-main .box-2 {
+#home .box-2 {
   grid-area: sub;
 }
-main .call-to-action-box {
+#home .call-to-action-box {
   --column-1: calc(65px - var(--small-padding) - var(--small-padding));
 
   width: 100%;
@@ -101,7 +101,7 @@ main .call-to-action-box {
 
   margin: 0 0 6px 0;
 }
-main .call-to-action-box .svg-container {
+#home .call-to-action-box .svg-container {
   height: var(--column-1);
   width: var(--column-1);
   background-color: var(--primary);
@@ -116,7 +116,7 @@ main .call-to-action-box .svg-container {
     color: var(--text-muted);
   }
 }
-main .call-to-action-box .call-title {
+#home .call-to-action-box .call-title {
   display: block;
   grid-area: title;
   font-family: var(--font-body);
@@ -126,7 +126,7 @@ main .call-to-action-box .call-title {
   display: flex;
   align-items: flex-end;
 }
-main .call-to-action-box .call-bio {
+#home .call-to-action-box .call-bio {
   display: block;
   grid-area: bio;
   font-family: var(--font-body);
@@ -135,7 +135,7 @@ main .call-to-action-box .call-bio {
   display: flex;
   align-items: flex-start;
 }
-main .box-2 .sub-title {
+#home .box-2 .sub-title {
   height: 75px;
   display: flex;
   align-items: center;
@@ -143,19 +143,19 @@ main .box-2 .sub-title {
   font-size: 1rem;
   font-weight: 600;
 }
-main .box-2 .sub-title .primary {
+#home .box-2 .sub-title .primary {
   color: var(--text);
   margin: 0 12px 0 0;
 }
-main .box-2 span {
+#home .box-2 span {
   font-weight: 100;
   color: var(--text-extra-muted);
 }
-main .box-2 .sub-title .secondary {
+#home .box-2 .sub-title .secondary {
   color: var(--text-extra-muted);
   margin: 0 0 0 12px;
 }
-main .box-2 .recently-added-list li {
+#home .box-2 .recently-added-list li {
   transition: 0.1s ease-out;
   cursor: pointer;
 
@@ -213,7 +213,7 @@ main .box-2 .recently-added-list li {
     }
   }
 }
-main .box-2 .recently-added-list li:hover {
+#home .box-2 .recently-added-list li:hover {
   background-color: var(--bg-light);
 
   .thumbnail-container {
@@ -235,7 +235,7 @@ main .box-2 .recently-added-list li:hover {
   }
 }
 
-main .box-2 ol li {
+#home .box-2 ol li {
   font-family: var(--font-body);
   transition: 0.2s;
 
@@ -248,40 +248,40 @@ main .box-2 ol li {
   justify-content: flex-start;
   gap: 12px;
 }
-main .box-2 ol li:hover {
+#home .box-2 ol li:hover {
   background-color: var(--bg-light);
 }
-main .box-2 ol li .name:hover {
+#home .box-2 ol li .name:hover {
   color: var(--primary-light);
   cursor: pointer;
 }
-main .box-2 ol li:first-child {
+#home .box-2 ol li:first-child {
   background-color: rgba(241, 215, 45, 0.304);
   .ranking {
     background-color: rgba(241, 215, 45, 0.567);
   }
 }
-main .box-2 ol li:nth-child(2) {
+#home .box-2 ol li:nth-child(2) {
   .ranking {
     background-color: rgba(192, 192, 192, 0.522);
   }
 }
-main .box-2 ol li:nth-child(3) {
+#home .box-2 ol li:nth-child(3) {
   .ranking {
     background-color: rgba(132, 38, 38, 0.546);
   }
 }
-main .box-2 ol li:has(.name:hover) {
+#home .box-2 ol li:has(.name:hover) {
   background-color: var(--bg-light);
 }
-main .box-2 ol li:first-child,
-main .box-2 ol li:nth-child(2),
-main .box-2 ol li:nth-child(3) {
+#home .box-2 ol li:first-child,
+#home .box-2 ol li:nth-child(2),
+#home .box-2 ol li:nth-child(3) {
   .ranking {
     color: black;
   }
 }
-main .box-2 ol .ranking {
+#home .box-2 ol .ranking {
   width: 25px;
   height: 25px;
 
@@ -295,20 +295,20 @@ main .box-2 ol .ranking {
   align-items: center;
   justify-content: center;
 }
-main .box-2 ol .avatar {
+#home .box-2 ol .avatar {
   width: 35px;
   height: 35px;
 
   border-radius: 35px;
   background-color: aliceblue;
 }
-main .box-2 ol .name {
+#home .box-2 ol .name {
   font-size: 0.9rem;
   color: var(--text);
   margin-right: auto;
   transition: 0.2s;
 }
-main .box-2 ol .total-uploads {
+#home .box-2 ol .total-uploads {
   font-size: 0.8rem;
   color: var(--text-muted);
 

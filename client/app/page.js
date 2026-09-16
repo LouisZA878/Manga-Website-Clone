@@ -294,7 +294,7 @@ export default function Home() {
   };
 
   return (
-    <main>
+    <main id="home">
       <div className="box-1">
         <Announcements />
         <Socials />
