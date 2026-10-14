@@ -18,7 +18,7 @@ spec:
           image: sakosa878/auth
           env:
             - name: DB_URI
-              value: "mongodb://mongo-srv:27017/auth"
+              value: "mongodb://mongo-srv:27017/manga"
 
 ---
 apiVersion: v1
