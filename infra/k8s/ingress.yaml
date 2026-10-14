@@ -1,0 +1,14 @@
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: comic-website-ingress
+  namespace: comic-website
+spec:
+  entryPoints:
+    - web
+  routes:
+    - kind: Rule
+      match: Host(`api.comic.local`)
+      services:
+        - name: backend-srv
+          port: 3001
