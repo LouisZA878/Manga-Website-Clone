@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: sakosa878/auth
+          image: localhost:32000/backend:v1
           env:
             - name: DB_URI
               value: "mongodb://mongo-srv:27017/manga"
