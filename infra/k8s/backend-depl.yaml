@@ -20,13 +20,13 @@ spec:
             - name: DB_URI
               value: "mongodb://mongo-srv:27017/manga"
             - name: PORT
-              value: 3001
+              value: "3001"
             - name: CLIENT_URI
-              value: http://0.0.0.0:3000
+              value: "http://0.0.0.0:3000"
             - name: AVATAR_COLLECTION
-              value: avatar_col
+              value: "avatar_col"
             - name: COMIC_COLLECTION
-              value: comic_col
+              value: "comic_col"
 
             - name: REFRESH_TOKEN_SIGNATURE
               valueFrom:
@@ -51,7 +51,7 @@ spec:
                   key: DB_USER
 
             - name: API
-              value: /api/v1
+              value: "/api/v1"
 
 ---
 apiVersion: v1

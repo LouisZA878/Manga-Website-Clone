@@ -20,7 +20,7 @@ spec:
             - name: GLIBC_TUNABLES
               value: "glibc.pthread.rseq=1"
             - name: MONGO_INITDB_DATABASE
-              value: manga
+              value: "manga"
             - name: MONGO_INITDB_ROOT_PASSWORD
               valueFrom:
                 secretKeyRef:
