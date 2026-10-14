@@ -19,6 +19,39 @@ spec:
           env:
             - name: DB_URI
               value: "mongodb://mongo-srv:27017/manga"
+            - name: PORT
+              value: 3001
+            - name: CLIENT_URI
+              value: http://0.0.0.0:3000
+            - name: AVATAR_COLLECTION
+              value: avatar_col
+            - name: COMIC_COLLECTION
+              value: comic_col
+
+            - name: REFRESH_TOKEN_SIGNATURE
+              valueFrom:
+                secretKeyRef:
+                  name: comic-website-secrets
+                  key: REFRESH_TOKEN
+            - name: ACCESS_TOKEN_SIGNATURE
+              valueFrom:
+                secretKeyRef:
+                  name: comic-website-secrets
+                  key: ACCESS_TOKEN
+
+            - name: DB_USER_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: comic-website-secrets
+                  key: DB_USER_PASSWORD
+            - name: DB_USER
+              valueFrom:
+                secretKeyRef:
+                  name: comic-website-secrets
+                  key: DB_USER
+
+            - name: API
+              value: /api/v1
 
 ---
 apiVersion: v1
