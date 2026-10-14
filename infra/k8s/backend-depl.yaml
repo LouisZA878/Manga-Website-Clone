@@ -1,19 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: auth-depl
+  name: backend-depl
+  namespace: comic-website
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: auth
+      app: backend
   template:
     metadata:
       labels:
-        app: auth
+        app: backend
     spec:
       containers:
-        - name: auth
+        - name: backend
           image: sakosa878/auth
           env:
             - name: JWT_KEY
