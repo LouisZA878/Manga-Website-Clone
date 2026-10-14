@@ -17,24 +17,20 @@ spec:
         - name: backend
           image: sakosa878/auth
           env:
-            - name: JWT_KEY
-              valueFrom:
-                secretKeyRef:
-                  name: jwt-secret
-                  key: JWT_KEY
-            - name: MONGO_URI
-              value: "mongodb://auth-mongo-srv:27017/auth"
+            - name: DB_URI
+              value: "mongodb://mongo-srv:27017/auth"
 
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: auth-srv
+  name: backend-srv
+  namespace: comic-website
 spec:
   selector:
-    app: auth
+    app: backend
   ports:
-    - name: auth
+    - name: backend
       protocol: TCP
       port: 3001
       targetPort: 3001
