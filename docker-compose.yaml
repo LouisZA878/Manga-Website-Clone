@@ -1,0 +1,62 @@
+services:
+  db:
+    container_name: db
+    image: mongo:8.3.11
+    ports:
+      - "27017:27017"
+    volumes:
+      - db:/data/db
+    networks:
+      - db_network
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=Kwerty8347Dje
+      - MONGO_INITDB_ROOT_PASSWORD=DLdekqkKd32hJD63483de
+      - MONGO_INITDB_DATABASE=manga
+      - GLIBC_TUNABLES=glibc.pthread.rseq=1
+
+  backend:
+    container_name: express-backend
+    build:
+      context: ./backend
+    ports:
+      - 3001:3001
+    networks:
+      - cors_network
+      - db_network
+    environment:
+      - RUNTIME=docker
+      - PORT=3001
+      - CLIENT_URI=http://192.168.1.17:3000
+      - DB_URI=mongodb://db:27017/manga
+      - DB_USER=Kwerty8347Dje
+      - DB_USER_PASSWORD=DLdekqkKd32hJD63483de
+      - AVATAR_COLLECTION=avatar_col
+      - COMIC_COLLECTION=comic_col
+      - REFRESH_TOKEN_SIGNATURE=fda82976116326cfe7d2919743e8231ec2adb72edfcc8479b685d79029e5153f
+      - ACCESS_TOKEN_SIGNATURE=af00ef9b13e804c51d1a20c92f51e50eb82191cbed70d0020feebd20fa01badf
+      - API=/api/v1
+
+  # client:
+  #   container_name: next-client
+  #   build:
+  #     context: ./client
+  #     args:
+  #       OUTPUT: standalone
+  #   ports:
+  #     - 3000:3000
+  #   networks:
+  #     - cors_network
+  #   environment:
+  #     - BACKEND_URL=http://192.168.1.17:3001/api/v1/
+  #     - IP=192.168.1.17
+  #     - OUTPUT=standalone
+
+  #   depends_on:
+  #     - backend
+
+networks:
+  db_network:
+  cors_network:
+
+volumes:
+  db:
